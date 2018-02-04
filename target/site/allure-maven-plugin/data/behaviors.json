@@ -1,0 +1,37 @@
+{
+  "features" : [ {
+    "title" : "Телевизоры",
+    "statistic" : {
+      "total" : 1,
+      "passed" : 1,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "stories" : [ {
+      "uid" : "5b94971e255af032",
+      "title" : "Выбор телевизора с помощью фильтра",
+      "statistic" : {
+        "total" : 1,
+        "passed" : 1,
+        "pending" : 0,
+        "canceled" : 0,
+        "failed" : 0,
+        "broken" : 0
+      },
+      "testCases" : [ {
+        "uid" : "aa1d2f6825527468",
+        "name" : "Выбор телевизора с помощью фильтра",
+        "title" : "Выбор телевизора с помощью фильтра",
+        "time" : {
+          "start" : 1517757167282,
+          "stop" : 1517757196291,
+          "duration" : 29009
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      } ]
+    } ]
+  } ]
+}

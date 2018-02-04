@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1517757167249" stop="1517757196296" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Телевизоры</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1517757167282" stop="1517757196291" status="passed">
+            <name>Выбор телевизора с помощью фильтра</name>
+            <title>Выбор телевизора с помощью фильтра</title>
+            <description type="text"></description>
+            <steps>
+                <step start="1517757175850" stop="1517757179372" status="passed">
+                    <name>Когда выбран пункт основного меню "Маркет"</name>
+                    <title>Когда выбран пункт основного меню "Маркет"</title>
+                    <attachments/>
+                    <steps>
+                        <step start="1517757176450" stop="1517757179371" status="passed">
+                            <name>selectMenuItem[Маркет]</name>
+                            <title>Выбран пункт меню Маркет</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1517757179373" stop="1517757182353" status="passed">
+                    <name>Когда выбран пункт основного меню Яндекс маркета"Электроника"</name>
+                    <title>Когда выбран пункт основного меню Яндекс маркета"Электроника"</title>
+                    <attachments/>
+                    <steps>
+                        <step start="1517757179374" stop="1517757182352" status="passed">
+                            <name>selectMainMenuItem[Электроника]</name>
+                            <title>Выбран пункт меню Электроника</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1517757182353" stop="1517757187313" status="passed">
+                    <name>Когда выбран пункт из списка электроники"Телевизоры"</name>
+                    <title>Когда выбран пункт из списка электроники"Телевизоры"</title>
+                    <attachments/>
+                    <steps>
+                        <step start="1517757182355" stop="1517757187313" status="passed">
+                            <name>selectElectronicsListItem[Телевизоры]</name>
+                            <title>Выбран пункт списка Телевизоры</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1517757187313" stop="1517757190265" status="passed">
+                    <name>Когда выбран расширенный фильтр</name>
+                    <title>Когда выбран расширенный фильтр</title>
+                    <attachments/>
+                    <steps>
+                        <step start="1517757187315" stop="1517757190264" status="passed">
+                            <name>clickingOnFilter</name>
+                            <title>Выбирается расширенный фильтр</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1517757190265" stop="1517757190587" status="passed">
+                    <name>Когда заполняются поля:</name>
+                    <title>Когда заполняются поля:</title>
+                    <attachments/>
+                    <steps>
+                        <step start="1517757190270" stop="1517757190586" status="passed">
+                            <name>stepFillField[Цена от, 20000]</name>
+                            <title>Поле Цена от заполняется значением 20000</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1517757190587" stop="1517757190816" status="passed">
+                    <name>Когда выбран пункт из списка брэндов"Samsung"</name>
+                    <title>Когда выбран пункт из списка брэндов"Samsung"</title>
+                    <attachments/>
+                    <steps>
+                        <step start="1517757190589" stop="1517757190814" status="passed">
+                            <name>selectingProductBrand[Samsung]</name>
+                            <title>Выбран брэнд Samsung</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1517757190816" stop="1517757191104" status="passed">
+                    <name>Когда выбран пункт из списка брэндов"LG"</name>
+                    <title>Когда выбран пункт из списка брэндов"LG"</title>
+                    <attachments/>
+                    <steps>
+                        <step start="1517757190818" stop="1517757191104" status="passed">
+                            <name>selectingProductBrand[LG]</name>
+                            <title>Выбран брэнд LG</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1517757191105" stop="1517757194621" status="passed">
+                    <name>Тогда Нажата кнопка показать подходящие</name>
+                    <title>Тогда Нажата кнопка показать подходящие</title>
+                    <attachments/>
+                    <steps>
+                        <step start="1517757191106" stop="1517757194621" status="passed">
+                            <name>clickingOnShowBtn</name>
+                            <title>Нажатие кнопки - показать подходящие</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1517757194621" stop="1517757194694" status="passed">
+                    <name>Когда Проверено, что отображается 12 элементов</name>
+                    <title>Когда Проверено, что отображается 12 элементов</title>
+                    <attachments/>
+                    <steps>
+                        <step start="1517757194623" stop="1517757194693" status="passed">
+                            <name>checkCountOfResults</name>
+                            <title>проверка количества элементов</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1517757194694" stop="1517757196051" status="passed">
+                    <name>Когда в поискувую строку вставляется название первого элемента</name>
+                    <title>Когда в поискувую строку вставляется название первого элемента</title>
+                    <attachments/>
+                    <steps>
+                        <step start="1517757194696" stop="1517757196051" status="passed">
+                            <name>fillingSearch</name>
+                            <title>получение имени первого элемента</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start="1517757196052" stop="1517757196286" status="passed">
+                    <name>Тогда нажимается кнопка поиска</name>
+                    <title>Тогда нажимается кнопка поиска</title>
+                    <attachments/>
+                    <steps>
+                        <step start="1517757196053" stop="1517757196286" status="passed">
+                            <name>clickingOnSubmitBtn</name>
+                            <title>Нажатие кнопки найти</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Выбор телевизора с помощью фильтра"/>
+                <label name="feature" value="Телевизоры"/>
+                <label name="host" value="nb-03332"/>
+                <label name="thread" value="8052@nb-03332.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="Телевизоры"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

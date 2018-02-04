@@ -1,0 +1,38 @@
+{
+  "time" : {
+    "start" : 1517757167282,
+    "stop" : 1517757196291,
+    "duration" : 29009
+  },
+  "testSuites" : [ {
+    "uid" : "3bdc6855895b6515",
+    "name" : "Телевизоры",
+    "title" : "Телевизоры",
+    "time" : {
+      "start" : 1517757167282,
+      "stop" : 1517757196291,
+      "duration" : 29009
+    },
+    "statistic" : {
+      "total" : 1,
+      "passed" : 1,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "aa1d2f6825527468",
+      "name" : "Выбор телевизора с помощью фильтра",
+      "title" : "Выбор телевизора с помощью фильтра",
+      "time" : {
+        "start" : 1517757167282,
+        "stop" : 1517757196291,
+        "duration" : 29009
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

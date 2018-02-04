@@ -1,0 +1,17 @@
+pages\TvPage.class
+steps\ResultPageSteps.class
+util\TestProperties.class
+util\AllureReporter.class
+steps\TvPageSteps.class
+steps\BaseSteps.class
+pages\ElectronicsPage.class
+steps\ScenarioSteps.class
+pages\MainPage.class
+steps\ElectronicsPageSteps.class
+pages\AbstractPage.class
+steps\MainPageSteps.class
+pages\MarketPage.class
+pages\ResultPage.class
+pages\FilterPage.class
+steps\MarketPageSteps.class
+steps\FilterPageSteps.class
