@@ -7,12 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 import steps.BaseSteps;
 
 public class FilterPage extends AbstractPage{
-    //*[contains(@name,'glf-pricefrom-var')]
+
     @FindBy(name = "glf-pricefrom-var")
     WebElement priceFrom;
 
     @FindBy(xpath =
-            "//*[contains(@class,'n-filter-block n-filter-cookie i-bem n-filter-block_type_normal b-zone b-spy-visible n-filter-block_closed_no n-filter-block_pos_aside n-filter-block_js_inited n-filter-cookie_js_inited')]//*[contains(@class,'n-filter-block__list-items i-bem')]")
+            "//div[contains(@data-filter-id,'7893318')]//div[contains(@class,'n-filter-block__list-items')]")
     WebElement checkBoxMenu;
 
     @FindBy(xpath = "//*[contains(text(),'Показать подходящие')]/..")

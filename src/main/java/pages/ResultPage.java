@@ -5,16 +5,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import steps.BaseSteps;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class ResultPage extends AbstractPage {
 
     @FindBy(xpath = "//input[contains(@id,'header-search')]")
     public WebElement searchingBox;
 
-    @FindBy(xpath = "//div[1][contains(@class,'n-snippet-card2__title')]//a[contains(@title,'Телевизор ')]")
+    @FindBy(xpath = "//div[contains(@class,'n-snippet-')]//*[contains(@class,'title')]//a[contains(@class,'link')][1]")
     public WebElement firstElement;
 
     @FindBy(xpath = "//*[contains(@type,'submit')]")
@@ -22,6 +24,8 @@ public class ResultPage extends AbstractPage {
 
     public ResultPage(){
         PageFactory.initElements(BaseSteps.getDriver(),this);
+        BaseSteps.getDriver().manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        //new WebDriverWait(BaseSteps.getDriver(),10);
     }
 
     public void firstResultName(){

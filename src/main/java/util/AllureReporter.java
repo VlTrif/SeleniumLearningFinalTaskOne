@@ -13,7 +13,8 @@ public class AllureReporter extends ru.yandex.qatools.allure.cucumberjvm.AllureR
 
     @Override
     public void result(Result result) {
-        if (result.getStatus().equals("failure")) {
+        //if (result.getStatus().equals("failure")) {
+        if ("failed".equals(result.getStatus())) {
             takeScreenShot(result);
         }
         super.result(result);
