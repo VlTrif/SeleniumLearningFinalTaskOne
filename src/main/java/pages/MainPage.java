@@ -11,8 +11,6 @@ public class MainPage extends AbstractPage{
     @FindBy(xpath = "//*[contains(@class,'home-tabs ')]")
     WebElement mainMenu;
 
-    //*[contains(@class,'topmenu__list')]
-
     public MainPage () {
         PageFactory.initElements(BaseSteps.getDriver(), this);
 

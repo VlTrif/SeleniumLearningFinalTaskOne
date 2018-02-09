@@ -7,22 +7,23 @@ import pages.ResultPage;
 import ru.yandex.qatools.allure.annotations.Step;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import static org.junit.Assert.assertTrue;
 
 public class ResultPageSteps {
 
     @Step("проверка количества элементов")
     public void checkCountOfResults(){
-        List<WebElement> elements = BaseSteps.getDriver().findElements(By.xpath("//*[contains(@data-id,'model-')]"));
-        Assert.assertTrue(elements.size()==12);
+        new ResultPage().checkCountOfResults();
     }
 
-    /*@Step("Поле {0} заполняется значением {1}")
-    public void stepFillSearchField(String field){
-        String firstName = BaseSteps.getDriver().findElement(By.xpath("//div[1][contains(@class,'n-snippet-card2__title')]//a[contains(@title,'Телевизор ')]")).getText();
-        new ResultPage().fillField(field,firstName);
-    }*/
+    @Step("Сохранено название первого товара в списке")
+    public void saveFirstElement(){
+        new ResultPage().saveFirstElement();
+    }
 
-    @Step("получение имени первого элемента")
+    @Step("Ввод в строку поиска значения сохраненного элемента")
     public void fillingSearch(){
         new ResultPage().firstResultName();
     }
@@ -31,5 +32,14 @@ public class ResultPageSteps {
     public void clickingOnSubmitBtn(){
 
         new ResultPage().submitBtn.click();
+    }
+
+    @Step("Проверка соответствия найденного элемента запрошенному")
+    public void checkSearch(){
+        BaseSteps.getDriver().manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        String actualTitle = new ResultPage().titleGoods.getText();
+        String searchText = new ResultPage().searchingBox.getText();
+        assertTrue(String.format("Заголовок равен [%s]. Ожидалось - [%s]",
+                actualTitle, searchText), actualTitle.contains(searchText));
     }
 }

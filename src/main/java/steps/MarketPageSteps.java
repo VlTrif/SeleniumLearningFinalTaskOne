@@ -11,9 +11,4 @@ public class MarketPageSteps {
         new MarketPage().selectMainMenu(menuItem);
     }
 
-    /*@Step("Выбран пункт раскрывающегося меню {0}")
-    public void selectAltMenuItem(String menuItem){
-
-        new MarketPage().selectAltMenu(menuItem);
-    }*/
 }

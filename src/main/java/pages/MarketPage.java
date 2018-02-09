@@ -23,8 +23,5 @@ public class MarketPage extends AbstractPage{
         mainMenu.findElement(By.xpath(".//li[contains(@data-department,'"+menuItem+"')]")).click();
     }
 
-    /*public void selectAltMenu (String menuItem){
-        altMenu.findElement(By.xpath(".//a[contains(text(),'"+menuItem+"')]")).click();
-    }*/
 }
 

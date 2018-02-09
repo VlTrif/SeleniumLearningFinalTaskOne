@@ -13,7 +13,6 @@ public class AllureReporter extends ru.yandex.qatools.allure.cucumberjvm.AllureR
 
     @Override
     public void result(Result result) {
-        //if (result.getStatus().equals("failure")) {
         if ("failed".equals(result.getStatus())) {
             takeScreenShot(result);
         }
@@ -22,7 +21,7 @@ public class AllureReporter extends ru.yandex.qatools.allure.cucumberjvm.AllureR
 
     public void takeScreenShot(Result step) {
         if (getDriver() != null) {
-            Allure.LIFECYCLE.fire(new MakeAttachmentEvent(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES),
+            Allure.LIFECYCLE.fire(new MakeAttachmentEvent(((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.BYTES),
                     "Скриншот в момент ошибки", "image/png"));
         }
     }

@@ -19,5 +19,5 @@ public class ElectronicsPage extends AbstractPage{
     public void selectMainMenu (String menuItem){
         mainMenu.findElement(By.xpath("./div//a[1][contains(text(),'"+menuItem+"')]")).click();
     }
-    //*[contains(@class,'n-filter-panel-aside__show-more')]//*[contains(text(),'Перейти ко всем фильтрам')]
+
 }

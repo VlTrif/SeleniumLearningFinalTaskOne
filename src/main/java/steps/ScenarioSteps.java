@@ -23,9 +23,6 @@ public class ScenarioSteps {
         marketPageSteps.selectMainMenuItem(menuItem);
     }
 
-    /*@When("^выбран пункт раскрывающегося меню Яндекс маркета\"(.+)\"$")
-    public void selectAltMenuItem(String menuItem) {marketPageSteps.selectAltMenuItem(menuItem);}*/
-
     @When("^выбран пункт из списка электроники\"(.+)\"$")
     public void selectElectronicsListItem(String menuItem){electronicsPageSteps.selectElectronicsListItem(menuItem);}
 
@@ -46,9 +43,19 @@ public class ScenarioSteps {
     @When("Проверено, что отображается 12 элементов")
     public void checkCountOfResults(){resultPageSteps.checkCountOfResults();}
 
+    @When("сохранено название первого товара в списке")
+    public void saveFirstElement(){
+        resultPageSteps.saveFirstElement();
+    }
+
     @When("в поискувую строку вставляется название первого элемента")
     public void fillingSearch(){resultPageSteps.fillingSearch();}
 
     @Then("нажимается кнопка поиска")
     public void clickingOnSubmitBtn(){resultPageSteps.clickingOnSubmitBtn();}
+
+    @Then("найденный элемент соответствует поиску")
+    public void checkSearch(){
+        resultPageSteps.checkSearch();
+    }
 }

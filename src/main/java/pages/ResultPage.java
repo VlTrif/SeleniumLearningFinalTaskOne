@@ -11,10 +11,15 @@ import steps.BaseSteps;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static org.junit.Assert.assertTrue;
+
 public class ResultPage extends AbstractPage {
 
     @FindBy(xpath = "//input[contains(@id,'header-search')]")
     public WebElement searchingBox;
+
+    @FindBy(xpath = "//h1[contains(@class,'title')]")
+    public WebElement titleGoods;
 
     @FindBy(xpath = "//div[contains(@class,'n-snippet-')]//*[contains(@class,'title')]//a[contains(@class,'link')][1]")
     public WebElement firstElement;
@@ -25,22 +30,20 @@ public class ResultPage extends AbstractPage {
     public ResultPage(){
         PageFactory.initElements(BaseSteps.getDriver(),this);
         BaseSteps.getDriver().manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        //new WebDriverWait(BaseSteps.getDriver(),10);
+    }
+
+    public void checkCountOfResults(){
+        List<WebElement> elements = BaseSteps.getDriver().findElements(By.xpath("//*[contains(@data-id,'model-')]"));
+        assertTrue(elements.size()==12);
+    }
+
+    public String saveFirstElement(){
+        String element = firstElement.getText();
+        return element;
     }
 
     public void firstResultName(){
-        String firstName = firstElement.getText();
-        searchingBox.sendKeys(firstName);
+        searchingBox.sendKeys(saveFirstElement());
     }
-
-    /*public void fillField(String fieldName, String value) {
-        switch (fieldName) {
-            case "Поиск":
-                fillField(searchingBox, value);
-                break;
-            default:
-                throw new AssertionError("Поле '" + fieldName + "' не объявлено на странице");
-        }
-    }*/
 
 }
